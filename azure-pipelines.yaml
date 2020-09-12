@@ -6,7 +6,7 @@ stages:
   jobs: 
   - job: 'Build_And_Test'
     steps:
-    - script: cd complete && ./gradlew bootRun
+    - script: cd complete && ./gradlew build
       displayName: build stage
     - script:  cd complete && ./gradlew test
       displayName: test stage
