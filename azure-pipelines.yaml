@@ -1,0 +1,32 @@
+pool:
+  vmImage: 'Ubuntu 16.04'
+  
+stages:
+
+- stage: Obtain Source Code
+  jobs:
+  - job: A1
+    displayName: Obtener Codigo fuente
+    steps:
+    - bash: echo "A"
+    
+- stage: Build or Compile Spring Boot App
+  jobs:
+  - job: B1
+    displayName: Compilar Aplicación
+    steps:
+    - bash: echo "A"
+    
+- stage: Execute Unit Tests
+  jobs:
+  - job: B1
+    displayName: Ejecutar Pruebas unitarias con Gradle
+    steps:
+    - bash: echo "A"
+    
+- stage: Static Code Analyzer
+  jobs:
+  - job: B1
+    displayName: Analisis de Codigo con SonarQube
+    steps:
+    - bash: echo "A"
