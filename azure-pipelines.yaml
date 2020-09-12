@@ -3,28 +3,28 @@ pool:
   
 stages:
 
-- stage: Obtain Source Code
+- stage: Obtain_Source_Code
   jobs:
   - job: A1
     displayName: Obtener Codigo fuente
     steps:
     - bash: echo $JAVA_HOME
     
-- stage: Build or Compile Spring Boot App
+- stage: Build_Spring_Boot_App
   jobs:
   - job: B1
     displayName: Compilar Aplicación
     steps:
     - bash: echo "A"
     
-- stage: Execute Unit Tests
+- stage: Execute_Unit_Tests
   jobs:
   - job: B1
     displayName: Ejecutar Pruebas unitarias con Gradle
     steps:
     - bash: echo "A"
     
-- stage: Static Code Analyzer
+- stage: Static_Code_Analyzer
   jobs:
   - job: B1
     displayName: Analisis de Codigo con SonarQube
