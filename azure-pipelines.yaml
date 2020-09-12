@@ -8,7 +8,7 @@ stages:
   - job: A1
     displayName: Obtener Codigo fuente
     steps:
-    - bash: echo "A"
+    - bash: echo $JAVA_HOME
     
 - stage: Build or Compile Spring Boot App
   jobs:
