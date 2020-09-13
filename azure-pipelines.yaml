@@ -23,8 +23,7 @@ stages:
         publishJUnitResults: false
         javaHomeOption: 'JDKVersion'
         sonarQubeRunAnalysis: true
-        sqGradlePluginVersionChoice: 'specify'
-        sonarQubeGradlePluginVersion: '2.6.1'
+        sqGradlePluginVersionChoice: 'build'
     - task: SonarCloudPublish@1
       inputs:
         pollingTimeoutSec: '300'
