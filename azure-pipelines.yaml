@@ -14,7 +14,11 @@ stages:
       inputs:
         SonarCloud: 'SonarCloudConexion'
         organization: 'danieltoro165051'
-        scannerMode: 'Other'
+        scannerMode: 'CLI'
+        configMode: 'manual'
+        cliProjectKey: 'test-app'
+        cliProjectName: 'Spring-boot-app'
+        cliSources: '.'
     - task: Gradle@2
       inputs:
         gradleWrapperFile: 'complete/gradlew'
