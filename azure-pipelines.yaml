@@ -25,6 +25,7 @@ stages:
     - task: Gradle@2
       inputs:
         gradleWrapperFile: 'complete/gradlew'
+        workingDirectory: 'complete'
         tasks: 'sonarqube'
         publishJUnitResults: false
         javaHomeOption: 'JDKVersion'
