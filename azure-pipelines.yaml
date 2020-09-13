@@ -23,7 +23,8 @@ stages:
           # Additional properties that will be passed to the scanner, 
           # Put one key=value per line, example:
           # sonar.exclusions=**/*.bin
-          sonar.inclusions=**/*.class
+          sonar.inclusions=.
+          sonar.java.binaries=**/*.class
           #sonar.tests=complete/build/classes/java/test/com/example/springboot/**.class
     - task: Gradle@2
       inputs:
