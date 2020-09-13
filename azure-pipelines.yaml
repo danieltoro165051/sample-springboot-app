@@ -20,11 +20,11 @@ stages:
         gradleWrapperFile: 'complete'
         workingDirectory: 'complete'
         tasks: 'AnalisisDeCodigoSonarC'
-        publishJUnitResults: true
-        testResultsFiles: '**/TEST-*.xml'
+        publishJUnitResults: false
         javaHomeOption: 'JDKVersion'
         sonarQubeRunAnalysis: true
-        sqGradlePluginVersionChoice: 'build'
+        sqGradlePluginVersionChoice: 'specify'
+        sonarQubeGradlePluginVersion: '2.6.1'
     - task: SonarCloudPublish@1
       inputs:
         pollingTimeoutSec: '300'
