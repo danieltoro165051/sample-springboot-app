@@ -22,6 +22,7 @@ stages:
           sonar.inclusions=.
           sonar.languaje=java
           sonar.java.binaries=**/*.java
+          sonar.branch.name=master
           #sonar.tests=complete/build/classes/java/test/com/example/springboot/**.class
     - task: Gradle@2
       inputs:
