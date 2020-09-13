@@ -8,14 +8,12 @@ steps:
 - task: Gradle@2
   displayName: 'gradlew build'
   inputs:
-    gradleWrapperFile: '$(Parameters.wrapperScript)'
     workingDirectory: complete
     tasks: '$(Parameters.tasks)'
 
 - task: Gradle@2
   displayName: 'gradlew test'
   inputs:
-    gradleWrapperFile: 'gradlew test'
     workingDirectory: complete
     tasks: test
 
