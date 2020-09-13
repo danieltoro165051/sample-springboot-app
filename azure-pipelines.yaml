@@ -17,7 +17,7 @@ stages:
         scannerMode: 'Other'
     - task: Gradle@2
       inputs:
-        gradleWrapperFile: 'complete'
+        gradleWrapperFile: 'complete/gradlew'
         workingDirectory: 'complete'
         tasks: 'AnalisisDeCodigoSonarC'
         publishJUnitResults: false
