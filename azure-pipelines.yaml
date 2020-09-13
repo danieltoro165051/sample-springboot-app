@@ -19,6 +19,12 @@ stages:
         cliProjectKey: 'test-app'
         cliProjectName: 'Spring-boot-app'
         cliSources: '.'
+        extraProperties: |
+          # Additional properties that will be passed to the scanner, 
+          # Put one key=value per line, example:
+          # sonar.exclusions=**/*.bin
+          sonar.inclusions=**/*.class
+          sonar.tests=**/*.test
     - task: Gradle@2
       inputs:
         gradleWrapperFile: 'complete/gradlew'
