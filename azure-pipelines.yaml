@@ -18,10 +18,10 @@ stages:
         extraProperties: |
           # Additional properties that will be passed to the scanner, 
           # Put one key=value per line, example:
-          sonar.exclusions=**/*.bin,/build/libs/**.*
+          sonar.exclusions=**/*.war
           sonar.inclusions=.
           sonar.languaje=java
-          sonar.java.binaries=**/*.java
+          sonar.java.binaries=**/*.class
           sonar.branch.name=master
           #sonar.tests=complete/build/classes/java/test/com/example/springboot/**.class
     - task: Gradle@2
