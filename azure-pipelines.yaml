@@ -14,11 +14,7 @@ stages:
       inputs:
         SonarCloud: 'SonarCloudConexion'
         organization: 'danieltoro165051'
-        scannerMode: 'CLI'
-        configMode: 'manual'
-        cliProjectKey: 'test-app'
-        cliProjectName: 'Spring-boot-app'
-        cliSources: '.'
+        scannerMode: 'Other'
         extraProperties: |
           # Additional properties that will be passed to the scanner, 
           # Put one key=value per line, example:
