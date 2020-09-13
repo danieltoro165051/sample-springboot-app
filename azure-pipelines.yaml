@@ -24,7 +24,7 @@ stages:
           # Put one key=value per line, example:
           # sonar.exclusions=**/*.bin
           sonar.inclusions=**/*.class
-          sonar.tests=**/*.test
+          sonar.tests=complete/build/classes/java/test/com/example/springboot/**.class
     - task: Gradle@2
       inputs:
         gradleWrapperFile: 'complete/gradlew'
