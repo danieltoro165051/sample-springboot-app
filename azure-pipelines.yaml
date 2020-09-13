@@ -23,7 +23,7 @@ stages:
       inputs:
         gradleWrapperFile: 'complete/gradlew'
         workingDirectory: 'complete'
-        tasks: 'AnalisisDeCodigoSonarC'
+        tasks: 'test'
         publishJUnitResults: false
         javaHomeOption: 'JDKVersion'
         sonarQubeRunAnalysis: true
