@@ -15,7 +15,17 @@ stages:
         SonarCloud: 'SonarCloudConexion'
         organization: 'danieltoro165051'
         scannerMode: 'Other'
-    - task: SonarCloudAnalyze@1
+    - task: Gradle@2
+      inputs:
+        gradleWrapperFile: 'gradlew'
+        tasks: 'Análisis de Código'
+        publishJUnitResults: true
+        testResultsFiles: '**/TEST-*.xml'
+        codeCoverageToolOption: 'Cobertura'
+        codeCoverageClassFilesDirectories: 'build/classes/main/'
+        javaHomeOption: 'JDKVersion'
+        sonarQubeRunAnalysis: true
+        sqGradlePluginVersionChoice: 'build'
     - task: SonarCloudPublish@1
       inputs:
         pollingTimeoutSec: '300'
