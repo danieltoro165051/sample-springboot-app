@@ -23,7 +23,7 @@ stages:
       inputs:
         gradleWrapperFile: 'complete/gradlew'
         workingDirectory: 'complete'
-        tasks: 'test'
+        tasks: 'sonarqube'
         publishJUnitResults: false
         javaHomeOption: 'JDKVersion'
         sonarQubeRunAnalysis: true
