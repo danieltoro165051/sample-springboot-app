@@ -4,7 +4,7 @@ pool:
 stages:
 - stage: CI
   jobs: 
-  - job: 'Build_And_Test'
+  - job: 'Integracion_Continua'
     steps:
     - script: cd complete && ./gradlew build
       displayName: build stage
@@ -21,6 +21,7 @@ stages:
           #sonar.exclusions=**/*.bin
           sonar.inclusions=.
           sonar.languaje=java
+          sonar.java.binaries=**/*.java
           #sonar.tests=complete/build/classes/java/test/com/example/springboot/**.class
     - task: Gradle@2
       inputs:
